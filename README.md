@@ -11,6 +11,7 @@ When running, the tool:
 
 ### Running
 The tool can be run using gradle from the command line using 'gradle run'.
+
 **A reload is needed after starting the GAE development server.**
 
 ### Command-line instructions
