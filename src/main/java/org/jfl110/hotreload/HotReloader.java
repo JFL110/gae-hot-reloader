@@ -47,7 +47,7 @@ public class HotReloader {
 			}
 			
 			if(command.trim().toUpperCase().equals(FORCE_RELOAD_COMMAND)){
-				hotReloadingService.triggerCompleteReload(configuration.getWebInfOutputDirectory());
+				hotReloadingService.reload(configuration.getWebInfOutputDirectory());
 			}
 		}
 		

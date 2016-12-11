@@ -72,7 +72,7 @@ class HotReloadingService {
 
 			if (anyChanges.get()) {
 				if (isFirst) {
-					triggerCompleteReload(configuration.getWebInfOutputDirectory());
+					appengineWebXmlReload(configuration.getWebInfOutputDirectory());
 				}
 				log("-------");
 			}
@@ -87,8 +87,14 @@ class HotReloadingService {
 		}
 	}
 	
+	
+	void reload(Path webInfDir){
+		updateHistory.clear();
+		appengineWebXmlReload(webInfDir);
+	}
+	
 
-	void triggerCompleteReload(Path webInfDir) {
+	private void appengineWebXmlReload(Path webInfDir) {
 		log("Attempting complete reload");
 
 		Path appengineXml = webInfDir.resolve(APP_ENGINE_XML_FILENAME);
