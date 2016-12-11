@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
+
 /**
  * Periodically scans the source directories, keeps track of the file update
  * times on the .class files in those directories and copies them to the target
@@ -41,7 +42,11 @@ class HotReloadingService {
 
 			configuration.getClassDirectoriesToMonitor().forEach((baseDir) -> {
 				try {
-					Files.walk(baseDir).filter(Files::isRegularFile).filter(isClass()).filter(needsUpdating())
+					Files
+					.walk(baseDir)
+					.filter(Files::isRegularFile)
+					.filter(isClass())
+					.filter(needsUpdating())
 							.forEach((path) -> {
 								Path relativePath = path.subpath(baseDir.getNameCount(), path.getNameCount());
 								Path destinationPath = outputClassesDir.resolve(relativePath);
@@ -81,8 +86,9 @@ class HotReloadingService {
 			}
 		}
 	}
+	
 
-	private void triggerCompleteReload(Path webInfDir) {
+	void triggerCompleteReload(Path webInfDir) {
 		log("Attempting complete reload");
 
 		Path appengineXml = webInfDir.resolve(APP_ENGINE_XML_FILENAME);
