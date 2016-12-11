@@ -12,7 +12,7 @@ When running, the tool:
 ### Running
 The tool can be run using gradle from the command line using 'gradle run'.
 
-**The tool must be started after the GAE development server.**
+**The tool must be started AFTER the GAE development server.**
 
 ### Command-line instructions
 * 'stop' - stops the tool.
