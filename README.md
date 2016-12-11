@@ -12,11 +12,9 @@ When running, the tool:
 ### Running
 The tool can be run using gradle from the command line using 'gradle run'.
 
-**The tool must be started AFTER the GAE development server.**
-
 ### Command-line instructions
 * 'stop' - stops the tool.
-* 'reload' - tries to trigger a reload of the server by re-saving the appengine-web.xml file.
+* 'reload' - tries to trigger a reload of the server by re-saving the appengine-web.xml file. **A reload must be triggered AFTER the GAE development server is re/started.**
 
 ### Configuration
 Specify the following properties in the 'src/main/resources/reload.properties' file.
