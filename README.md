@@ -22,7 +22,6 @@ Specify the following properties in the 'src/main/resources/reload.properties' f
 * 'webinf-dir' - The path to the output WEB-INF directory.
 * 'source-dirs' - Space-separated list of paths to scan for .class files. For Eclipse projects this would be '\bin' in the root project folder.
 
-### Memory
-Continual hot relacing grows the PermGen memory and can eventually cause an OutOfMemoryException.
-It may be possible to solve this problem by encouraging garbage collection of the PermGen space.
-See http://stackoverflow.com/questions/660437/what-makes-hot-deployment-a-hard-problem
+### Considerations
+* A full reload is a more surefire way to include changes.
+* Extended hotswapping may cause the PermGen space to grow and eventually cause an OutOfMemoryException
