@@ -19,7 +19,8 @@ The tool can be run using gradle from the command line using 'gradle run'.
 ### Configuration
 Specify the following properties in the 'src/main/resources/reload.properties' file.
 * 'interval-ms' - The number of milliseconds between each scan of the source directories.
-* 'webinf-dir' - The path to the output WEB-INF directory.
+* 'webapp-dir' - The path to the output exploded-war directory.
+* 'webapp-source-dir' - The path to the source webapp directory that contains static resources.
 * 'source-dirs' - Space-separated list of paths to scan for .class files. For Eclipse projects this would be '\bin' in the root project folder.
 
 ### Considerations
