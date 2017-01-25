@@ -25,4 +25,4 @@ Specify the following properties in the 'src/main/resources/reload.properties' f
 
 ### Considerations
 * A full reload is a more surefire way to include changes.
-* Extended hotswapping may cause the PermGen space to grow and eventually cause an OutOfMemoryException
+* Extensive hotswapping may cause the PermGen space to grow and eventually cause an OutOfMemoryException
